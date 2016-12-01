@@ -44,12 +44,12 @@
         </div>
         <h3>欢迎使用 xxx</h3>
 
-        <form class="m-t" role="form" action="http://www.zi-han.net/theme/hplus/index.html">
+        <form class="m-t" role="form" action="" method="post" id="inputForm">
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="用户名" required="">
+                <input type="email" class="form-control" placeholder="用户名" name="username">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" placeholder="密码" required="">
+                <input type="password" class="form-control" placeholder="密码" name="password">
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
 
@@ -64,5 +64,35 @@
 <script src="${contextPath}/resources/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="${contextPath}/resources/js/jquery.validate.js"></script>
 <script src="${contextPath}/resources/js/messages_zh.js"></script>
+<script type="text/javascript">
+$(function () {
+    $("#inputForm").validate({
+        rules:{
+            username:{
+                required:true
+            },
+            password:{
+                required:true
+            }
+        },
+        messages:{
+            username:{
+                required: "不能为空",
+            },
+            password:{
+                required: "不能为空",
+            }
+        },
+
+        submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form
+            alert("提交表单");
+            form.submit();   //提交表单
+        },
+
+    });
+
+})
+
+</script>
 </body>
 </html>
