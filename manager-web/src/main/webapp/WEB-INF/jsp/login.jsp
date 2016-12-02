@@ -39,20 +39,22 @@
     <div>
         <div>
 
-            <h1 class="logo-name">xxxx</h1>
+            <h1 class="logo-name"></h1>
 
         </div>
         <h3>欢迎使用 xxx</h3>
 
-        <form class="m-t" role="form" action="" method="post" id="inputForm">
+        <form class="m-t" role="form" action="${contextPath}/login" method="post" id="inputForm">
             <div class="form-group">
-                <input type="email" class="form-control" placeholder="用户名" name="username">
+                <input type="text" class="form-control" placeholder="用户名" name="username">
+                <label id="username-error" ></label>
             </div>
             <div class="form-group">
                 <input type="password" class="form-control" placeholder="密码" name="password">
+                <label id="password-error" ></label>
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
-
+            <span style="color:red;"><form:errors path="*"/></span>
 
             <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
             </p>
@@ -77,11 +79,15 @@ $(function () {
         },
         messages:{
             username:{
-                required: "不能为空",
+                required: "用户名不能为空",
             },
             password:{
-                required: "不能为空",
+                required: "密码不能为空",
             }
+        },
+
+        errorPlacement: function(error, element) { //错误信息位置设置方法
+            element.next().text(error.text());
         },
 
         submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form

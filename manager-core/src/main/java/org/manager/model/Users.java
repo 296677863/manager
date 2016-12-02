@@ -1,7 +1,7 @@
 package org.manager.model;
 
-import com.lei.util.BeanProvider;
 import org.manager.Repository.impl.UsersRepository;
+import org.manager.util.BeanProvider;
 
 import java.util.Date;
 import java.util.List;
