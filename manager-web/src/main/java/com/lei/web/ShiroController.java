@@ -38,6 +38,11 @@ public class ShiroController {
         return "login";
     }
 
+    @RequestMapping(value = "content", method = RequestMethod.GET)
+    public String content(Model model) {
+        return "content";
+    }
+
 
     /*
      * Go login page
