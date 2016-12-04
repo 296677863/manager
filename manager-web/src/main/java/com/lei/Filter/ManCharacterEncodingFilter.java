@@ -1,6 +1,6 @@
 package com.lei.Filter;
 
-import com.lei.SystemCacheHolder.ThreadLocalHolder;
+import com.lei.systemCacheHolder.ThreadLocalHolder;
 import com.lei.util.WebUtils;
 import org.springframework.web.filter.CharacterEncodingFilter;
 

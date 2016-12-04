@@ -1,4 +1,4 @@
-package com.lei.Dto;
+package com.lei.view;
 
 import java.io.Serializable;
 

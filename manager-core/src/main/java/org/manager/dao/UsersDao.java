@@ -1,6 +1,5 @@
-package org.manager.Repository.impl;
+package org.manager.dao;
 
-import org.manager.Repository.Repository;
 import org.manager.model.Roles;
 
 import java.util.List;
@@ -8,7 +7,7 @@ import java.util.List;
 /**
  * Created by lei on 12/1/2016.
  */
-public interface UsersRepository extends Repository{
+public interface UsersDao extends BaseDao{
 
     List<Roles> findUsersRolesList(String usersGuid);
 

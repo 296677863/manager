@@ -1,6 +1,6 @@
 package org.manager.model;
 
-import org.manager.Repository.impl.UsersRepository;
+import org.manager.dao.UsersDao;
 import org.manager.util.BeanProvider;
 
 import java.util.Date;
@@ -12,7 +12,7 @@ import java.util.List;
 public class Users extends AbstractDomain{
     private static final long serialVersionUID = -3990278799194556012L;
 
-    private transient UsersRepository usersRepository = BeanProvider.getBean(UsersRepository.class);
+    private transient UsersDao usersRepository = BeanProvider.getBean(UsersDao.class);
 
     private String username;
     private String password;

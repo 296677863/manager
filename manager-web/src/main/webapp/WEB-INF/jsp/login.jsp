@@ -49,7 +49,7 @@
                 <label id="password-error" ></label>
             </div>
             <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
-            <span style="color:red;"><form:errors path="*"/></span>
+            <span style="color:red;"><form:errors path="*" cssClass="label label-warning"/></span>
 
             <p class="text-muted text-center"> <a href="login.html#"><small>忘记密码了？</small></a> | <a href="register.html">注册一个新账号</a>
             </p>
@@ -86,7 +86,6 @@ $(function () {
         },
 
         submitHandler: function(form){   //表单提交句柄,为一回调函数，带一个参数：form
-            alert("提交表单");
             form.submit();   //提交表单
         },
 

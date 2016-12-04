@@ -28,8 +28,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="manager" target="1.5" />
-      <module name="manager-core" target="1.5" />
-      <module name="manager-web" target="1.5" />
+      <module name="manager-core" target="1.6" />
+      <module name="manager-web" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -74,7 +74,7 @@
     Spring context listener
 -->
   <listener>
-    <listener-class>com.lei.Listener.BeanContextLoaderListener</listener-class>
+    <listener-class>com.lei.listener.BeanContextLoaderListener</listener-class>
   </listener>
 
 

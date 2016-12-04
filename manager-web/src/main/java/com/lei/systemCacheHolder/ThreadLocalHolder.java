@@ -1,4 +1,4 @@
-package com.lei.SystemCacheHolder;
+package com.lei.systemCacheHolder;
 
 /**
  * Created by lei on 11/30/2016.

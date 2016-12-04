@@ -1,6 +1,6 @@
 package org.manager.model;
 
-import org.manager.Repository.impl.UsersRepository;
+import org.manager.dao.UsersDao;
 import org.manager.util.BeanProvider;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public class Roles  extends AbstractDomain {
     private static final long serialVersionUID = 8762398291767207066L;
 
 
-    private transient UsersRepository usersRepository = BeanProvider.getBean(UsersRepository.class);
+    private transient UsersDao usersRepository = BeanProvider.getBean(UsersDao.class);
 
     private int id;
 
