@@ -31,7 +31,7 @@ public class Roles  extends AbstractDomain {
         return this;
     }
 
-    public List<String> permissions() {
+    public List<Permission> permissions() {
         return this.usersRepository.findPermissionsByRoles(this.guid);
     }
 

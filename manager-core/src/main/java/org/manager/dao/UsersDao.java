@@ -1,5 +1,6 @@
 package org.manager.dao;
 
+import org.manager.model.Permission;
 import org.manager.model.Roles;
 
 import java.util.List;
@@ -11,5 +12,7 @@ public interface UsersDao extends BaseDao{
 
     List<Roles> findUsersRolesList(String usersGuid);
 
-    List<String> findPermissionsByRoles(String rolesGuid);
+    List<Permission> findPermissionsByRoles(String rolesGuid);
+
+    List<Roles> findRolesByPermission(String permissionGuid);
 }

@@ -2,6 +2,7 @@ package com.lei.dao.impl;
 
 import com.lei.dao.UserAuthzDao;
 import org.manager.jdbc.AbstractJdbcRepository;
+import org.manager.model.Permission;
 import org.manager.model.Roles;
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +19,12 @@ public class UserAuthzDaoImpl extends AbstractJdbcRepository implements UserAuth
     }
 
     @Override
-    public List<String> findPermissionsByRoles(String rolesGuid) {
+    public List<Permission> findPermissionsByRoles(String rolesGuid) {
+        return null;
+    }
+
+    @Override
+    public List<Roles> findRolesByPermission(String permissionGuid) {
         return null;
     }
 }

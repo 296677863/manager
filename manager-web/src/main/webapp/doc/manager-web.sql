@@ -82,6 +82,8 @@ CREATE TABLE `roles` (
   UNIQUE KEY `guid` (`guid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
+
+
 /*Table structure for table `roles_permissions` */
 
 DROP TABLE IF EXISTS `roles_permissions`;
