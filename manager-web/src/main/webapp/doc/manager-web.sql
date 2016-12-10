@@ -90,8 +90,9 @@ DROP TABLE IF EXISTS `roles_permissions`;
 
 CREATE TABLE `roles_permissions` (
   `roles_id` int(11) NOT NULL,
-  `permission` varchar(255) NOT NULL,
-  KEY `roles_id_index` (`roles_id`)
+  `permission_id` int(11) NOT NULL,
+  KEY `roles_id_index` (`roles_id`),
+  KEY `permission_id_index` (`permission_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Table structure for table `user_roles` */
@@ -124,6 +125,20 @@ CREATE TABLE `users` (
   UNIQUE KEY `username` (`username`),
   KEY `username_index` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+
+create table `permission`(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `guid` varchar(255) NOT NULL ,
+  `create_time` datetime Default null,
+  `code` varchar(255) NOT NULL,
+  `menuName` varchar(255) ,
+  `menuUrl` varchar(255),
+  `parentId` VARCHAR(255),
+  `sort` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `guid` (`guid`)
+)ENGINE =InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET =utf8;
+
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Created by lei on 12/1/2016.
  */
-public interface UsersDao extends BaseDao{
+public interface UsersDao {
 
     List<Roles> findUsersRolesList(String usersGuid);
 

@@ -15,10 +15,24 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.lei.web"/>
 
-    <mvc:annotation-driven/>
+
+
+
+    <!--使用fastjson作为json解析器-->
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+                <property name="supportedMediaTypes" value="application/json"/>
+                <property name="features">
+                    <array>
+                        <value>WriteMapNullValue</value>
+                        <value>WriteDateUseDateFormat</value>
+                    </array>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
     <mvc:default-servlet-handler/>
-
-
     <!--
         静态资源直接映射到 目录地址
     -->
@@ -33,6 +47,16 @@
         <property name="prefix" value="/WEB-INF/jsp/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <!-- 拦截器配置-->
+    <mvc:interceptors>
+        <!-- SQL注入拦截-->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.lei.util.SqlInjectInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 
     <!-- fileUpload Support -->
     <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->

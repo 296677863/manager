@@ -11,7 +11,7 @@ public class MyJdbcRealm extends JdbcRealm implements InitializingBean {
 
     public static final String USER_ROLES_QUERY = "select r.role_name from user_roles ur,users u,roles r  where ur.users_id = u.id and ur.roles_id = r.id and u.username = ?";
 
-    public static final String PERMISSIONS_QUERY = "select rp.permission from roles_permissions rp,roles r where r.id = rp.roles_id and r.role_name = ?";
+    public static final String PERMISSIONS_QUERY = "select p.code from permission p,oles_permissions rp,roles r where p.id=rp.permission_id and r.id = rp.roles_id and r.role_name = ?";
 
 
 
