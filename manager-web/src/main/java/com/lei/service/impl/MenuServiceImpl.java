@@ -37,6 +37,8 @@ public class MenuServiceImpl implements MenuService{
                 menuDto.setId(guid);
                 menuDto.setName(p.getMenuName());
                 menuDto.setUrl(p.getMenuUrl());
+                String cls=p.getIconUrl();
+                menuDto.setIconCls(cls);
                 List<MenuDto> childList=new ArrayList<MenuDto>();
                 for(Permission cp:permissions){
                     MenuDto menuChildDto=new MenuDto();

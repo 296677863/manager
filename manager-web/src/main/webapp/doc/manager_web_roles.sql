@@ -1,0 +1,2 @@
+INSERT INTO `manager-web`.roles (guid, create_time, archived, version, role_name) VALUES ('1', null, 0, 0, 'system');
+INSERT INTO `manager-web`.roles (guid, create_time, archived, version, role_name) VALUES ('2', null, 0, 0, 'user');

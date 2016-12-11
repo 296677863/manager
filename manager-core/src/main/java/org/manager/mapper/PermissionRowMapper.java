@@ -18,6 +18,9 @@ public class PermissionRowMapper implements RowMapper<Permission> {
         permission.setMenuName(resultSet.getString("menuName"));
         permission.setMenuUrl(resultSet.getString("menuUrl"));
         permission.setParentId(resultSet.getString("parentId"));
+        permission.setIsUse(resultSet.getString("isUse"));
+        permission.setType(resultSet.getString("type"));
+        permission.setIconUrl(resultSet.getString("iconUrl"));
         permission.guid(resultSet.getString("guid"))
                 .createTime(resultSet.getTimestamp("create_time"));
         return permission;

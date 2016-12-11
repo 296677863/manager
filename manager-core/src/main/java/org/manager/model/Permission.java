@@ -21,7 +21,13 @@ public class Permission extends AbstractDomain {
 
     private String parentId;
 
-    public Integer sort;
+    private Integer sort;
+
+    private String type;
+
+    private String iconUrl;
+
+    private String isUse;
 
     public Permission() {
     }
@@ -81,5 +87,29 @@ public class Permission extends AbstractDomain {
     public Permission setSort(Integer sort) {
         this.sort = sort;
         return this;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getIconUrl() {
+        return iconUrl;
+    }
+
+    public void setIconUrl(String iconUrl) {
+        this.iconUrl = iconUrl;
+    }
+
+    public String getIsUse() {
+        return isUse;
+    }
+
+    public void setIsUse(String isUse) {
+        this.isUse = isUse;
     }
 }
